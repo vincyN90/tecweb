@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+  <head>
+    <title>Home</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+    <script type="text/javascript">
+        function DataPrenotazioni(){
+            var date = new Date();
+
+            var giorno = date.getDate() + 7;
+            var mese = date.getMonth() + 1;
+            var anno = date.getFullYear();
+
+            if (mese < 10) mese = "0" + month;
+            if (giorno < 10) giorno = "0" + day;
+
+            var giornoutile = anno + "-" + mese + "-" + giorno;
+            return '<input type="date" name="datapartenza" min="'+ giornoutile +'"/>';
+        }  
+    </script>
+  </head>
+  <body>
+    <div id="testata"></div>
+    <div id="contenitore">
+        <div id="barrasuperiore">
+            <div id="logo"></div>
+            <div id="login">
+                <form id="formlogin" action="autenticazione.jsp" method="post">
+                    <table>
+                        <tr>
+                            <td><input name="username" placeholder="username" type="text" id="username" /></td>
+                            <td><input name="password" placeholder="password" type="password" id="password"/></td>
+                            <td><input type="submit" id="pulsantelogin" value="Login" /></td>
+                        </tr>
+                        <tr>
+                            <td colspan="3">Nuovo Autista Clicca<a href="#"> QUI</a> per registrarti</td>
+                        </tr>
+                    </table>
+                </form>
+            </div>
+        </div>
+        <div id="contenitorecentrale">
+            <form id="areaclienteoccasionale">
+                <table>
+                    <thead>
+                        <tr>
+                            <td colspan="2"><h1>Area Prenotazione</h1></td>
+                        </tr>
+                    </thead>
+                    <tr>
+                        <td>Nome</td>
+                        <td><input type="text" name="nome" placeholder="Es. Giuseppe"/></td>
+                    </tr>
+                    <tr>
+                        <td>Cognome</td>
+                        <td><input type="text" name="cognome" placeholder="Es. Rossi"/></td>
+                    </tr>
+                    <tr>
+                        <td>E-Mail</td>
+                        <td><input type="email" name="email" placeholder="Es. GiuseppeRossi@live.it"/></td>
+                    </tr>
+                    <tr>
+                        <td>Telefono</td>
+                        <td><input type="tel" name="telefono" placeholder="Es. 3334567890"/></td>
+                    </tr>
+                    <tr>
+                        <td>Sede di partenza</td>
+                        <td><input type="text" name="partenza" placeholder="Es. Via verdi 1, Napoli"/></td>
+                    </tr>
+                    <tr>
+                        <td>Sede di destinazione</td>
+                        <td><input type="text" name="destinazione" placeholder="Es. Piazza leiva, fiumicino Roma"/></td>
+                    </tr>
+                    <tr>
+                        <td>Data partenza</td>
+                        <td>
+                            <script type="text/jscript">
+                                document.write (DataPrenotazioni());
+                            </script>
+                        </td>
+                    </tr>
+                     <tr>
+                        <td>Numero di posti</td>
+                        <td><input type="text" name="numeroposti" placeholder="Es. 23"/></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>
+                            <input type="submit" id="prenota" value="Invia Richiesta" /> 
+                        </td>
+                    </tr>
+                </table>
+            </form>
+        </div>
+    </div>
+  </body>
+</html>
+

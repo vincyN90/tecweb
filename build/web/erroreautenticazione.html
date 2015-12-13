@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+  <head>
+    <title>Errore</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+  </head>
+  <body>
+    <div id="testata"></div>
+    <div id="contenitore">
+        <div id="barrasuperiore">
+            <div id="logo"></div>
+            <div id="login">
+                <form id="formlogin" action="autenticazione.jsp" method="post">
+                    <table>
+                        <tr>
+                            <td><input name="username" placeholder="username" type="text" id="username" /></td>
+                            <td><input name="password" placeholder="password" type="password" id="password"/></td>
+                            <td><input type="submit" id="pulsantelogin" value="Login" /></td>
+                        </tr>
+                        <tr>
+                            <td colspan="3">Nuovo Autista Clicca<a href="#"> QUI</a> per registrarti</td>
+                        </tr>
+                    </table>
+                </form>
+            </div>
+        </div>
+        <div id="contenitorecentrale">
+            <div id="erroreautenticazione">
+                <h1> ERRORE<br /> DI AUTENTICAZIONE! </h1>
+                Reindirizzamento automatico alla pagina HOME tra 3 sec
+                <script language="JavaScript" type="text/javascript">
+                    window.setTimeout ("location.href=('index.html')", 3000);
+                </script>
+            </div>
+        </div>
+    </div>
+  </body>
+</html>
+
